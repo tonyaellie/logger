@@ -9,7 +9,7 @@ Logger for Tonya's projects.
 With `npm`:
 
 ``` text
-npm install @greencoast/logger
+npm install @tonyaellie/logger
 ```
 
 ### Logging Messages

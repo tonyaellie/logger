@@ -1,6 +1,6 @@
 {
   "name": "@tonyaellie/logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A logger with some stuff idk.",
   "main": "src/app.js",
   "engines": {
