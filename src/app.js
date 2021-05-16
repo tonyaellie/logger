@@ -17,7 +17,6 @@ const parseArguments = (args) => {
 };
 
 const prepareMessage = (chalkStyle, prefix, args) => {
-  console.log(args)
   events.emit('all', `(${new Date().toLocaleTimeString()})`, prefix, args.join(' '));
   return chalkStyle(`(${new Date().toLocaleTimeString()}) - ${chalk.bold(prefix)} - `, ...parseArguments(Array.prototype.slice.call(args)));;
 };
