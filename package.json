@@ -1,6 +1,6 @@
 {
-  "name": "logger",
-  "version": "1.0.0",
+  "name": "@tonyaellie/logger",
+  "version": "1.0.1",
   "description": "A logger with some stuff idk.",
   "main": "src/app.js",
   "engines": {
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/tonyaellie/logger#readme",
   "dependencies": {
     "chalk": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0"
   }
 }
