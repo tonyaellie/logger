@@ -17,10 +17,8 @@ export const initLogger = (prod?: boolean, url?: string): Logger => {
     if (!prodUrl) {
       throw new Error('Url is required for production.');
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new ProdLogger(prodUrl);
   } else {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new DevLogger();
   }
 };
