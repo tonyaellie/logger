@@ -1,6 +1,6 @@
 {
   "name": "@tonyaellie/logger",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A logger with some stuff idk.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
