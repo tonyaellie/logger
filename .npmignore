@@ -10,3 +10,4 @@ test/
 jest.config.ts
 nodemon.json
 tsconfig.json
+README.md
