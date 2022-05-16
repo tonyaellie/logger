@@ -10,19 +10,27 @@ export default class ProdLogger extends Logger {
 
   private sendLog(type: string, ...args: unknown[]): Promise<boolean> {
     return new Promise((resolve) => {
-      http.get(
-        `${this.url}/?type=${type}&message=${Buffer.from(
-          this.parseargs(args).join(' ').substring(0, 1000)
-        ).toString('base64')}`,
-        (res) => {
-          // if there is an error switch to local logging
-          if (res.statusCode !== 200) {
-            resolve(false);
-          }
+      try {
+        const req = http.get(
+          `${this.url}/?type=${type}&message=${Buffer.from(
+            this.parseargs(args).join(' ').substring(0, 1000)
+          ).toString('base64')}`,
+          (res) => {
+            // if there is an error switch to local logging
+            if (res.statusCode !== 200) {
+              resolve(false);
+            }
 
-          resolve(true);
-        }
-      );
+            resolve(true);
+          }
+        );
+        req.on('error', () => {
+          resolve(false);
+        });
+        req.end();
+      } catch {
+        resolve(false);
+      }
     });
   }
 
