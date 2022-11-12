@@ -30,11 +30,11 @@ const info = (...arguments) => {
 };
 
 const error = (...arguments) => {
-  console.error(prepareMessage(chalk.red, '[ERROR]', arguments));
+  console.log(prepareMessage(chalk.red, '[ERROR]', arguments));
 };
 
 const fatal = (...arguments) => {
-  console.error(prepareMessage(chalk.red, '[FATAL]', arguments));
+  console.log(prepareMessage(chalk.red, '[FATAL]', arguments));
 };
 
 const warn = (...arguments) => {
