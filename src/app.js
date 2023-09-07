@@ -21,28 +21,28 @@ const prepareMessage = (chalkStyle, prefix, args) => {
   return chalkStyle(`(${new Date().toLocaleTimeString()}) - ${chalk.bold(prefix)} - `, ...parseArguments(Array.prototype.slice.call(args)));;
 };
 
-const log = (...arguments) => {
-  console.log(prepareMessage(chalk.white, '[LOG]', arguments));
+const log = (...args) => {
+  console.log(prepareMessage(chalk.white, '[LOG]', args));
 };
 
-const info = (...arguments) => {
-  console.info(prepareMessage(chalk.cyan, '[INFO]', arguments));
+const info = (...args) => {
+  console.info(prepareMessage(chalk.cyan, '[INFO]', args));
 };
 
-const error = (...arguments) => {
-  console.log(prepareMessage(chalk.red, '[ERROR]', arguments));
+const error = (...args) => {
+  console.log(prepareMessage(chalk.red, '[ERROR]', args));
 };
 
-const fatal = (...arguments) => {
-  console.log(prepareMessage(chalk.red, '[FATAL]', arguments));
+const fatal = (...args) => {
+  console.log(prepareMessage(chalk.red, '[FATAL]', args));
 };
 
-const warn = (...arguments) => {
-  console.warn(prepareMessage(chalk.yellow, '[WARN]', arguments));
+const warn = (...args) => {
+  console.warn(prepareMessage(chalk.yellow, '[WARN]', args));
 };
 
-const debug = (...arguments) => {
-  console.debug(prepareMessage(chalk.green, '[DEBUG]', arguments));
+const debug = (...args) => {
+  console.debug(prepareMessage(chalk.green, '[DEBUG]', args));
 };
 
 const clear = () => {

@@ -1,8 +1,9 @@
 {
   "name": "@tonyaellie/logger",
-  "version": "1.0.5",
+  "version": "1.1.2",
   "description": "A logger with some stuff idk.",
   "main": "src/app.js",
+  "types": "src/app.d.ts",
   "engines": {
     "node": ">=10"
   },
